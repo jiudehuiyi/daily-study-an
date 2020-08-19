@@ -12,6 +12,22 @@ const HOCPrivateRoute = ({ component:Component,...rest })=>(
         )
     } } />
 )
+//Login页面
+// import React, { Component } from 'react'
+
+// export default class Login extends Component {
+//   handleClick = ()=>{
+//     localStorage.setItem('logined','true');
+//     if(this.props.location.state)
+//       this.props.history.push(this.props.location.state.from);
+//   }  
+//   render() {
+//     return (
+//       <button className="btn btn-primary" onClick={this.handleClick}>登录</button>
+//     )
+//   }
+// }
+
 
 
 export default HOCPrivateRoute;

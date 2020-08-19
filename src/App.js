@@ -1,26 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {
+  // BrowserRouter as Router,
+  HashRouter as Router,
+  Route,
+  Switch
+} from "react-router-dom"
+import Buttons from "./Buttons";
+import Context from "./createContext/Context.jsx";
+import LocContext from "./HocComponentAndRenderProps/LocContext.jsx";
+import HashRouter from "./HashRouter";
+class App extends React.Component{
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  
+  render(){
+    return (
+      <div className="App">
+       <Router>
+          <Route  path="/"component={Buttons} />
+            <Switch >
+              
+              <Route  path="/context" component={Context} />
+              <Route  path="/locContext" component={LocContext} />
+              <Route  path="/hashRouter" component={HashRouter} />
+            </Switch>
+        
+       </Router>
+
+     
+      </div>
+    );
+  }
 }
 
+
+
+
 export default App;
+
+
+
+
